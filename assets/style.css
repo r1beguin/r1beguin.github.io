@@ -642,17 +642,56 @@ h1 {
     background: #5568d3;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
     .container {
-        padding: 20px;
+        padding: 20px 15px;
+        border-radius: 15px;
     }
     
     h1 {
         font-size: 2em;
     }
     
+    .subtitle {
+        font-size: 0.95em;
+    }
+    
+    .search-bar {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+    
+    .filters-container {
+        padding: 15px;
+    }
+    
+    .filter-title {
+        font-size: 1em;
+    }
+    
+    .filter-btn,
+    .season-btn,
+    .digestibility-btn {
+        padding: 8px 14px;
+        font-size: 0.85em;
+    }
+    
     .food-list {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .food-card {
+        padding: 15px;
+    }
+    
+    .food-name {
+        font-size: 1.1em;
     }
     
     .list-sidebar {
@@ -665,5 +704,158 @@ h1 {
         right: 20px;
         width: 60px;
         height: 60px;
+        font-size: 1.8em;
+    }
+    
+    .list-badge {
+        width: 22px;
+        height: 22px;
+        font-size: 0.35em;
+    }
+}
+
+/* Très petits écrans (mobiles en mode portrait) */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    .container {
+        padding: 15px 10px;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        font-size: 1.6em;
+        margin-bottom: 5px;
+    }
+    
+    .subtitle {
+        font-size: 0.85em;
+    }
+    
+    header {
+        margin-bottom: 25px;
+    }
+    
+    .search-section {
+        margin-bottom: 20px;
+    }
+    
+    .search-bar {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+    
+    .filters-container {
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .filter-section {
+        margin-bottom: 15px;
+    }
+    
+    .filter-title {
+        font-size: 0.95em;
+        margin-bottom: 10px;
+    }
+    
+    .filter-btn,
+    .season-btn,
+    .digestibility-btn {
+        padding: 7px 12px;
+        font-size: 0.8em;
+    }
+    
+    .reset-btn {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    
+    .food-list {
+        gap: 12px;
+    }
+    
+    .food-card {
+        padding: 12px;
+    }
+    
+    .food-name {
+        font-size: 1em;
+    }
+    
+    .food-category,
+    .season-badge {
+        font-size: 0.7em;
+        padding: 4px 8px;
+    }
+    
+    .property {
+        font-size: 0.85em;
+    }
+    
+    .food-remarks {
+        font-size: 0.8em;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    
+    .floating-list-btn {
+        bottom: 15px;
+        right: 15px;
+        width: 55px;
+        height: 55px;
+        font-size: 1.6em;
+    }
+    
+    .list-badge {
+        width: 20px;
+        height: 20px;
+        font-size: 0.32em;
+        top: 3px;
+        right: 3px;
+    }
+    
+    .sidebar-header {
+        padding: 20px 15px;
+    }
+    
+    .sidebar-header h2 {
+        font-size: 1.3em;
+    }
+    
+    .sidebar-content {
+        padding: 15px;
+    }
+    
+    .list-item {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+    
+    .sidebar-footer {
+        padding: 15px;
+    }
+    
+    .export-btn,
+    .clear-list-btn {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+    
+    .food-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .list-sidebar {
+        width: 350px;
     }
 }
