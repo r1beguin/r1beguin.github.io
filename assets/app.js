@@ -27,7 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Charger les aliments depuis le JSON
 async function loadFoods() {
     try {
-        const response = await fetch('foods.json');
+        // Support pour GitHub Pages avec chemin de base configurable
+        const basePath = window.location.pathname.includes('/samaHelper/') 
+            ? '/samaHelper/' 
+            : '/';
+        const response = await fetch(basePath + 'foods.json');
         allFoods = await response.json();
         filteredFoods = allFoods;
         
