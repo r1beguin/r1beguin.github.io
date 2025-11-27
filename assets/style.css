@@ -204,16 +204,16 @@ h1 {
 }
 
 .digestibility-btn[data-digestibility="1"] {
-    border-color: #fd7e14;
-    color: #fd7e14;
+    border-color: #ffc107;
+    color: #997a00;
 }
 
 .digestibility-btn[data-digestibility="1"]:hover {
-    background: #fff5e6;
+    background: #fff9e6;
 }
 
 .digestibility-btn[data-digestibility="1"].active {
-    background: #fd7e14;
+    background: #ffc107;
     color: white;
 }
 
@@ -416,18 +416,33 @@ h1 {
 }
 
 /* Couleurs pour les valeurs de risque/histamine - correspondance avec les boutons de filtre */
-.property-value.high {
+/* Risque niveau 3 - Très élevé (rouge) */
+.property-value.very-high {
     color: #dc3545;
     font-weight: 700;
 }
 
+/* Risque niveau 2 - Élevé (orange) */
 .property-value.medium {
     color: #fd7e14;
     font-weight: 700;
 }
 
+/* Risque niveau 1 - Modéré (jaune-orange) */
 .property-value.low {
+    color: #ffc107;
+    font-weight: 700;
+}
+
+/* Risque niveau 0 - Faible (vert) */
+.property-value.very-low {
     color: #28a745;
+    font-weight: 700;
+}
+
+/* Pour l'histamine (système à 3 niveaux) */
+.property-value.high {
+    color: #dc3545;
     font-weight: 700;
 }
 

@@ -261,9 +261,10 @@ function createProperty(label, value, type) {
     } else if (type === 'inhibitor') {
         if (value.includes('I')) valueClass = 'inhibitor';
     } else if (type === 'digestibility') {
-        if (value === '2') valueClass = 'high';
-        else if (value === '1') valueClass = 'medium';
-        else if (value === '0') valueClass = 'low';
+        if (value === '3') valueClass = 'very-high';
+        else if (value === '2') valueClass = 'medium';
+        else if (value === '1') valueClass = 'low';
+        else if (value === '0') valueClass = 'very-low';
     }
     
     return `
