@@ -4,7 +4,7 @@ Application web pour la gestion de l'intolérance à l'histamine - Base de donn�
 
 ## 🚀 Démo en ligne
 
-[Voir l'application](https://VOTRE-USERNAME.github.io/samaHelper)
+[Voir l'application](https://r1beguin.github.io/samaHelper)
 
 ## 📋 Fonctionnalités
 
