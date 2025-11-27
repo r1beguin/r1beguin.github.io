@@ -86,21 +86,31 @@
                 </div>
             </div>
 
-            <!-- Filtre digestibilité -->
+            <!-- Filtre risque -->
             <div class="filter-section">
-                <h3 class="filter-title">Digestibilite</h3>
+                <h3 class="filter-title">Risque</h3>
                 <div class="digestibility-filters">
-                    <button class="digestibility-btn active" data-digestibility="all">Toutes</button>
-                    <button class="digestibility-btn" data-digestibility="0" title="Bonne digestibilite">0 - Bonne</button>
-                    <button class="digestibility-btn" data-digestibility="1" title="Digestibilite moyenne">1 - Moyenne</button>
-                    <button class="digestibility-btn" data-digestibility="2" title="Digestibilite difficile">2 - Difficile</button>
-                    <button class="digestibility-btn" data-digestibility="3" title="Tres difficile">3 - Tres difficile</button>
-                    <button class="digestibility-btn" data-digestibility="?" title="Digestibilite inconnue">? - Inconnu</button>
+                    <button class="digestibility-btn active" data-digestibility="all">Tous</button>
+                    <button class="digestibility-btn" data-digestibility="0" title="Risque faible">0 - Faible</button>
+                    <button class="digestibility-btn" data-digestibility="1" title="Risque modéré">1 - Modéré</button>
+                    <button class="digestibility-btn" data-digestibility="2" title="Risque élevé">2 - Élevé</button>
+                    <button class="digestibility-btn" data-digestibility="3" title="Risque très élevé">3 - Très élevé</button>
+                    <button class="digestibility-btn" data-digestibility="?" title="Risque inconnu">? - Inconnu</button>
                 </div>
             </div>
 
             <!-- Bouton reset -->
             <button id="resetFilters" class="reset-btn">Reinitialiser tous les filtres</button>
+        </div>
+
+        <!-- Avertissement sur les risques -->
+        <div class="warning-box">
+            <h3 class="warning-title">⚠️ Recommandations importantes</h3>
+            <ul class="warning-list">
+                <li><strong>Risque 3 (Très élevé) :</strong> À éviter totalement</li>
+                <li><strong>Risque 2 (Élevé) :</strong> À consommer en très petites quantités uniquement</li>
+                <li><strong>Attention :</strong> Les réactions varient d'un individu à l'autre. Il est essentiel de se renseigner et de consulter un professionnel de santé pour adapter votre alimentation à votre situation personnelle.</li>
+            </ul>
         </div>
 
         <div id="foodList" class="food-list">

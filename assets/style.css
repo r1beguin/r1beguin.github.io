@@ -204,16 +204,16 @@ h1 {
 }
 
 .digestibility-btn[data-digestibility="1"] {
-    border-color: #ffc107;
-    color: #997a00;
+    border-color: #fd7e14;
+    color: #fd7e14;
 }
 
 .digestibility-btn[data-digestibility="1"]:hover {
-    background: #fff9e6;
+    background: #fff5e6;
 }
 
 .digestibility-btn[data-digestibility="1"].active {
-    background: #ffc107;
+    background: #fd7e14;
     color: white;
 }
 
@@ -262,6 +262,55 @@ h1 {
     background: #c82333;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* Boîte d'avertissement */
+.warning-box {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 3px solid #ffc107;
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+}
+
+.warning-title {
+    color: #856404;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.warning-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.warning-list li {
+    color: #856404;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.warning-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.warning-list li:last-child {
+    margin-bottom: 0;
+}
+
+.warning-list strong {
+    color: #664d03;
+    font-weight: 700;
 }
 
 .food-list {
@@ -366,16 +415,20 @@ h1 {
     color: #333;
 }
 
+/* Couleurs pour les valeurs de risque/histamine - correspondance avec les boutons de filtre */
 .property-value.high {
     color: #dc3545;
+    font-weight: 700;
 }
 
 .property-value.medium {
-    color: #ffc107;
+    color: #fd7e14;
+    font-weight: 700;
 }
 
 .property-value.low {
     color: #28a745;
+    font-weight: 700;
 }
 
 .property-value.liberator {
@@ -681,6 +734,19 @@ h1 {
         font-size: 0.85em;
     }
     
+    .warning-box {
+        padding: 15px 18px;
+        margin-bottom: 20px;
+    }
+    
+    .warning-title {
+        font-size: 1.1em;
+    }
+    
+    .warning-list li {
+        font-size: 0.9em;
+    }
+    
     .food-list {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -771,6 +837,22 @@ h1 {
     .reset-btn {
         padding: 10px;
         font-size: 0.9em;
+    }
+    
+    .warning-box {
+        padding: 12px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .warning-title {
+        font-size: 1em;
+        margin-bottom: 12px;
+    }
+    
+    .warning-list li {
+        font-size: 0.85em;
+        padding-left: 18px;
+        margin-bottom: 8px;
     }
     
     .food-list {

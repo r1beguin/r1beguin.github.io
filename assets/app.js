@@ -221,7 +221,7 @@ function createFoodCard(food) {
                 ${createProperty('Histamine', food.histamine, 'histamine')}
                 ${createProperty('Liberateur', food.liberator, 'liberator')}
                 ${createProperty('Inhibiteur', food.inhibitor, 'inhibitor')}
-                ${createProperty('Digestibilite', food.digestibility, 'digestibility')}
+                ${createProperty('Risque', food.digestibility, 'digestibility')}
                 ${createProperty('Autres amines', food.other_amines, 'amines')}
             </div>
             
