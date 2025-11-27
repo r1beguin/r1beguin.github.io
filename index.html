@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMA Helper - Liste des Aliments</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Bouton flottant pour ouvrir la liste -->
+    <button class="floating-list-btn" onclick="toggleSidebar()" title="Ma liste d'aliments">
+        <span class="list-icon">📋</span>
+        <span class="list-badge" id="listCount">0</span>
+    </button>
+
+    <!-- Sidebar pour la liste -->
+    <div class="list-sidebar" id="listSidebar">
+        <div class="sidebar-header">
+            <h2>Ma liste d'aliments</h2>
+            <button class="close-sidebar-btn" onclick="toggleSidebar()">×</button>
+        </div>
+        
+        <div class="sidebar-content">
+            <div id="myListItems"></div>
+        </div>
+        
+        <div class="sidebar-footer">
+            <button class="export-btn" onclick="exportList('txt')">Exporter TXT</button>
+            <button class="export-btn" onclick="exportList('csv')">Exporter CSV</button>
+            <button class="export-btn" onclick="exportList('json')">Exporter JSON</button>
+            <button class="clear-list-btn" onclick="clearList()">Vider la liste</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>SAMA Helper</h1>
+            <p class="subtitle">Guide des aliments et intolerance a l'histamine</p>
+        </header>
+
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-bar" 
+                placeholder="Rechercher un aliment..."
+                autocomplete="off"
+            >
+            <div class="search-info">
+                <span id="resultCount">0</span> aliment(s) trouve(s)
+            </div>
+        </div>
+
+        <div class="filters-container">
+            <!-- Filtres principaux -->
+            <div class="filter-section">
+                <h3 class="filter-title">Filtres rapides</h3>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="high-histamine">Histamine elevee</button>
+                    <button class="filter-btn" data-filter="liberator">Liberateur</button>
+                    <button class="filter-btn" data-filter="inhibitor">Inhibiteur</button>
+                </div>
+            </div>
+
+            <!-- Filtre par catégorie -->
+            <div class="filter-section">
+                <h3 class="filter-title">Categorie d'aliment</h3>
+                <select id="categoryFilter" class="select-filter">
+                    <option value="all">Toutes les categories</option>
+                </select>
+            </div>
+
+            <!-- Filtre saisonnier -->
+            <div class="filter-section">
+                <h3 class="filter-title">Saison (fruits & legumes)</h3>
+                <div class="season-filters">
+                    <button class="season-btn" data-season="all">Toutes saisons</button>
+                    <button class="season-btn" data-season="printemps">Printemps</button>
+                    <button class="season-btn" data-season="ete">Ete</button>
+                    <button class="season-btn" data-season="automne">Automne</button>
+                    <button class="season-btn" data-season="hiver">Hiver</button>
+                    <button class="season-btn" data-season="toute_annee">Toute l'annee</button>
+                </div>
+            </div>
+
+            <!-- Filtre digestibilité -->
+            <div class="filter-section">
+                <h3 class="filter-title">Digestibilite</h3>
+                <div class="digestibility-filters">
+                    <button class="digestibility-btn active" data-digestibility="all">Toutes</button>
+                    <button class="digestibility-btn" data-digestibility="0" title="Bonne digestibilite">0 - Bonne</button>
+                    <button class="digestibility-btn" data-digestibility="1" title="Digestibilite moyenne">1 - Moyenne</button>
+                    <button class="digestibility-btn" data-digestibility="2" title="Digestibilite difficile">2 - Difficile</button>
+                    <button class="digestibility-btn" data-digestibility="3" title="Tres difficile">3 - Tres difficile</button>
+                    <button class="digestibility-btn" data-digestibility="?" title="Digestibilite inconnue">? - Inconnu</button>
+                </div>
+            </div>
+
+            <!-- Bouton reset -->
+            <button id="resetFilters" class="reset-btn">Reinitialiser tous les filtres</button>
+        </div>
+
+        <div id="foodList" class="food-list">
+            <div class="loading">Chargement des donnees...</div>
+        </div>
+    </div>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
